@@ -1,6 +1,6 @@
 var inputTask = document.getElementById("task");
 var btn = document.getElementById("btn");
-
+const ApiKey = "6666f61c60a208ee1fdba11b";
 btn.addEventListener("click", function () {
   addTodo();
 });
@@ -10,7 +10,7 @@ async function addTodo() {
     method: "POST",
     body: JSON.stringify({
       title: inputTask.value,
-      apiKey: "6666f61c60a208ee1fdba11b",
+      apiKey: ApiKey,
     }),
     headers: {
       "Content-Type": "application/json",
@@ -29,7 +29,7 @@ async function addTodo() {
 
 async function getAllTodo() {
   let response = await fetch(
-    "https://todos.routemisr.com/api/v1/todos/6666f61c60a208ee1fdba11b"
+    `https://todos.routemisr.com/api/v1/todos/${ApiKey}`
   );
   let data = await response.json();
   console.log(data.todos);
