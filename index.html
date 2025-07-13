@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Ajax</title>
+  </head>
+
+  <body>
+    <div class="w-50 m-auto shadow task-form p-4 my-5 rounded-4">
+      <input
+        id="task"
+        type="text"
+        class="form-control my-3"
+        placeholder="type your task..."
+      />
+      <button id="btn" class="btn btn-secondary">Add Task</button>
+      <h4 class="text-center my-4 text-white">All Tasks</h4>
+      <div id="tasks" class="text-center">
+        <span class="loader"></span>
+      </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
